@@ -1,0 +1,18 @@
+# Local runtime logs & state
+applied_changes.jsonl
+analyze_report*.txt
+backups/
+tmp/
+*.bak
+*.tmp
+*.log
+
+# Internal development notes
+architecture_snapshot.md
+decision_log*.md
+github_readiness_report*.md
+
+# AI & Editor artifacts
+.aider*
+.vscode/
+.idea/

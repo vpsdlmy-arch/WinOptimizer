@@ -1,0 +1,2886 @@
+﻿{
+    "$schema_version": "1.0.0",
+    "target_os": "Windows 11 Pro / Home (22H2 / 23H2 / 24H2)",
+    "profile_name": "standard-performance",
+    "created_at": "2026-08-05",
+    "components": [
+        {
+            "id": "Microsoft.WindowsStore",
+            "name": "Microsoft Store",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Required for Microsoft Store and Xbox Game Pass app delivery.",
+            "payload": {
+                "package_name": "Microsoft.WindowsStore"
+            }
+        },
+        {
+            "id": "GamingServices",
+            "name": "Gaming Services",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Game Pass",
+            "payload": {
+                "service_name": "GamingServices",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "XblAuthManager",
+            "name": "Xbox Identity Provider",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Xbox gaming identity and authentication provider.",
+            "payload": {
+                "service_name": "XblAuthManager",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "Microsoft.Xbox.TCUI",
+            "name": "Xbox TCUI",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Xbox gaming identity and authentication provider.",
+            "payload": {
+                "package_name": "Microsoft.Xbox.TCUI"
+            }
+        },
+        {
+            "id": "GameInputSvc",
+            "name": "GameInput Service",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Handles modern gamepad and gaming peripheral input.",
+            "payload": {
+                "service_name": "GameInputSvc",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "DirectX Runtime",
+            "name": "DirectX Runtime",
+            "subsystem": "Runtime",
+            "type": "Runtime",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "DirectX / DirectPlay runtime for gaming compatibility.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "DirectPlay",
+            "name": "DirectPlay (Legacy)",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "DirectX / DirectPlay runtime for gaming compatibility.",
+            "payload": {
+                "feature_name": "DirectPlay"
+            }
+        },
+        {
+            "id": "Visual C++ Redistributables",
+            "name": "Visual C++ Redistributables",
+            "subsystem": "Runtime",
+            "type": "Runtime",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Core runtime library required for modern desktop applications.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Microsoft.DotNet.Runtime",
+            "name": ".NET Runtime",
+            "subsystem": "Runtime",
+            "type": "Runtime",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Core runtime library required for modern desktop applications.",
+            "payload": {
+                "instruction": "Microsoft.DotNet.Runtime"
+            }
+        },
+        {
+            "id": "Microsoft.XboxApp",
+            "name": "Xbox Console Companion",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Deprecated Xbox Companion application.",
+            "payload": {
+                "package_name": "Microsoft.XboxApp"
+            }
+        },
+        {
+            "id": "Microsoft.XboxGamingOverlay",
+            "name": "Xbox Game Bar",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Xbox gaming identity and authentication provider.",
+            "payload": {
+                "package_name": "Microsoft.XboxGamingOverlay"
+            }
+        },
+        {
+            "id": "Microsoft.XboxSpeechToTextOverlay",
+            "name": "Xbox Game Speech Window",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Xbox speech-to-text overlay.",
+            "payload": {
+                "package_name": "Microsoft.XboxSpeechToTextOverlay"
+            }
+        },
+        {
+            "id": "Microsoft.GamingApp",
+            "name": "Microsoft Gaming App (Xbox)",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Game Pass",
+            "payload": {
+                "package_name": "Microsoft.GamingApp"
+            }
+        },
+        {
+            "id": "Microsoft.YourPhone",
+            "name": "Phone Link",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Phone Link application for mobile device synchronization.",
+            "payload": {
+                "package_name": "Microsoft.YourPhone"
+            }
+        },
+        {
+            "id": "bthserv",
+            "name": "Bluetooth Support Service",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Core Bluetooth support service for wireless peripherals.",
+            "payload": {
+                "service_name": "bthserv",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "PhoneSvc",
+            "name": "Phone Service (PhoneSvc)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Phone Link",
+            "payload": {
+                "service_name": "PhoneSvc",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "OpenSSH.Client~~~~0.0.1.0",
+            "name": "OpenSSH Client",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "OpenSSH client / server tools.",
+            "payload": {
+                "feature_name": "OpenSSH.Client~~~~0.0.1.0"
+            }
+        },
+        {
+            "id": "CrossDeviceService",
+            "name": "Cross Device Experience Host",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Connected Devices Platform: powers cross-device synchronization.",
+            "payload": {
+                "service_name": "CrossDeviceService",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "CDPSvc",
+            "name": "Connected Devices Platform",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Connected Devices Platform: powers cross-device synchronization.",
+            "payload": {
+                "service_name": "CDPSvc",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "Microsoft.WindowsCamera",
+            "name": "Windows Camera (app)",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Camera application.",
+            "payload": {
+                "package_name": "Microsoft.WindowsCamera"
+            }
+        },
+        {
+            "id": "OpenSSH.Server~~~~0.0.1.0",
+            "name": "OpenSSH Server",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "OpenSSH client / server tools.",
+            "payload": {
+                "feature_name": "OpenSSH.Server~~~~0.0.1.0"
+            }
+        },
+        {
+            "id": "SCardSvr",
+            "name": "Smart Card Service (SCardSvr)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Smart card reader infrastructure service.",
+            "payload": {
+                "service_name": "SCardSvr",
+                "target_start_type": "Disabled"
+            }
+        },
+        {
+            "id": "NFC",
+            "name": "NFC",
+            "subsystem": "DevicePolicy",
+            "type": "DevicePolicy",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Near Field Communication (NFC) device support.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKLM",
+                        "path": "SOFTWARE\\Policies\\Microsoft\\Windows\\NetCache",
+                        "name": "AllowNFC",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Containers-DisposableClientVM",
+            "name": "Windows Sandbox",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Sandbox: isolated lightweight disposable environment.",
+            "payload": {
+                "feature_name": "Containers-DisposableClientVM"
+            }
+        },
+        {
+            "id": "Microsoft-Hyper-V-All",
+            "name": "Hyper-V",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Hyper-V hypervisor for virtualization.",
+            "payload": {
+                "feature_name": "Microsoft-Hyper-V-All"
+            }
+        },
+        {
+            "id": "VirtualMachinePlatform",
+            "name": "Virtual Machine Platform",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Virtual Machine Platform: essential baseline for WSL2 and Sandbox.",
+            "payload": {
+                "feature_name": "VirtualMachinePlatform"
+            }
+        },
+        {
+            "id": "HypervisorPlatform",
+            "name": "Windows Hypervisor Platform",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Hyper-V hypervisor for virtualization.",
+            "payload": {
+                "feature_name": "HypervisorPlatform"
+            }
+        },
+        {
+            "id": "Microsoft.WindowsTerminal",
+            "name": "Windows Terminal",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Modern Windows Terminal application.",
+            "payload": {
+                "package_name": "Microsoft.WindowsTerminal"
+            }
+        },
+        {
+            "id": "PowerShell 7",
+            "name": "PowerShell 7",
+            "subsystem": "Runtime",
+            "type": "Runtime",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "PowerShell 7 modern cross-platform automation engine.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "NetFx3",
+            "name": ".NET Framework 3.5",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": ".NET Framework 3.5 runtime for legacy Windows applications and games.",
+            "payload": {
+                "feature_name": "NetFx3"
+            }
+        },
+        {
+            "id": ".NET Framework 4.x / Runtime",
+            "name": ".NET Framework 4.x / Runtime",
+            "subsystem": "Runtime",
+            "type": "Runtime",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Core runtime library required for modern desktop applications.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "ssh-agent",
+            "name": "SSH Agent",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "SSH authentication agent service for managing private keys.",
+            "payload": {
+                "service_name": "ssh-agent",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "Microsoft-Windows-Subsystem-Linux",
+            "name": "Windows Subsystem for Linux (WSL)",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Subsystem for Linux (WSL). Note: backup distros before disabling.",
+            "payload": {
+                "feature_name": "Microsoft-Windows-Subsystem-Linux"
+            }
+        },
+        {
+            "id": "Microsoft.Windows.DevHome",
+            "name": "Dev Home",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Dev Home developer dashboard.",
+            "payload": {
+                "package_name": "Microsoft.Windows.DevHome"
+            }
+        },
+        {
+            "id": "Dev Drive",
+            "name": "Dev Drive",
+            "subsystem": "Feature",
+            "type": "Feature",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "—",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Dev Drive ReFS virtual disk storage technology.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "DevDrv",
+            "name": "Dev Drive Filter",
+            "subsystem": "Driver",
+            "type": "Driver",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "—",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Dev Drive ReFS virtual disk storage technology.",
+            "payload": {
+                "instruction": "DevDrv"
+            }
+        },
+        {
+            "id": "Containers",
+            "name": "Containers (Windows Containers)",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Containers core feature for Hyper-V and containerized workloads.",
+            "payload": {
+                "feature_name": "Containers"
+            }
+        },
+        {
+            "id": "Java Runtime (OpenJDK, optional)",
+            "name": "Java Runtime (OpenJDK, optional)",
+            "subsystem": "Runtime",
+            "type": "Runtime",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Core runtime library required for modern desktop applications.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Language.OCR~~~ru-RU~0.0.1.0",
+            "name": "OCR: RU / EN / JA / ZH / KO (ru-RU)",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Media OCR language recognition package.",
+            "payload": {
+                "feature_name": "Language.OCR~~~ru-RU~0.0.1.0"
+            }
+        },
+        {
+            "id": "Language.OCR~~~en-US~0.0.1.0",
+            "name": "OCR: RU / EN / JA / ZH / KO (en-US)",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Media OCR language recognition package.",
+            "payload": {
+                "feature_name": "Language.OCR~~~en-US~0.0.1.0"
+            }
+        },
+        {
+            "id": "Language.OCR~~~ja-JP~0.0.1.0",
+            "name": "OCR: RU / EN / JA / ZH / KO (ja-JP)",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Media OCR language recognition package.",
+            "payload": {
+                "feature_name": "Language.OCR~~~ja-JP~0.0.1.0"
+            }
+        },
+        {
+            "id": "Language.OCR~~~zh-CN~0.0.1.0",
+            "name": "OCR: RU / EN / JA / ZH / KO (zh-CN)",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Media OCR language recognition package.",
+            "payload": {
+                "feature_name": "Language.OCR~~~zh-CN~0.0.1.0"
+            }
+        },
+        {
+            "id": "Language.OCR~~~ko-KR~0.0.1.0",
+            "name": "OCR: RU / EN / JA / ZH / KO (ko-KR)",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Media OCR language recognition package.",
+            "payload": {
+                "feature_name": "Language.OCR~~~ko-KR~0.0.1.0"
+            }
+        },
+        {
+            "id": "Language.OCR~~~<lang>~0.0.1.0",
+            "name": "OCR (Additional Languages)",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Script",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Media OCR language recognition package.",
+            "payload": {
+                "script_block": "$errs = @(); Get-WindowsCapability -Online -Name 'Language.OCR*' | Where-Object { $_.State -eq 'Installed' -and $_.Name -notmatch 'ru-RU|en-US|ja-JP|zh-CN|ko-KR' } | ForEach-Object { $cap = $_.Name; try { Remove-WindowsCapability -Online -Name $cap -ErrorAction Stop | Out-Null } catch { $errs += \"$cap: $($_.Exception.Message)\" } }; if ($errs.Count -gt 0) { throw \"Failed capabilities: $($errs -join '; ')\" }"
+            }
+        },
+        {
+            "id": "Language.TextToSpeech~~~<lang>~0.0.1.0",
+            "name": "Text-to-Speech (Additional Languages)",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Speech synthesis and voice typing language package.",
+            "payload": {
+                "feature_name": "Language.TextToSpeech~~~<lang>~0.0.1.0"
+            }
+        },
+        {
+            "id": "Language.Handwriting~~~<lang>~0.0.1.0",
+            "name": "Handwriting (Additional Languages)",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Handwriting recognition package for pen/stylus input.",
+            "payload": {
+                "feature_name": "Language.Handwriting~~~<lang>~0.0.1.0"
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Microsoft\\Speech_OneCore\\Preferences",
+            "name": "Voice Typing Online",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Online speech recognition and voice typing preference settings.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Microsoft\\Speech_OneCore\\Preferences",
+                        "name": "ModelDownloadAllowed",
+                        "type": "REG_DWORD",
+                        "value": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "OneDriveSetup.exe /uninstall",
+            "name": "Microsoft OneDrive",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Microsoft OneDrive cloud storage synchronization client.",
+            "payload": {
+                "instruction": "OneDriveSetup.exe /uninstall"
+            }
+        },
+        {
+            "id": "Microsoft.Windows.Copilot",
+            "name": "Copilot",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Copilot integration.",
+            "payload": {
+                "package_name": "Microsoft.Windows.Copilot"
+            }
+        },
+        {
+            "id": "Microsoft.Todos",
+            "name": "Microsoft To Do",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Microsoft To Do task management application.",
+            "payload": {
+                "package_name": "Microsoft.Todos"
+            }
+        },
+        {
+            "id": "Microsoft.BingNews",
+            "name": "Microsoft News",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "MSN News aggregator and feed application.",
+            "payload": {
+                "package_name": "Microsoft.BingNews"
+            }
+        },
+        {
+            "id": "Microsoft.BingWeather",
+            "name": "Weather",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "MSN Weather forecast application.",
+            "payload": {
+                "package_name": "Microsoft.BingWeather"
+            }
+        },
+        {
+            "id": "Microsoft.WindowsMaps",
+            "name": "Maps",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Offline Maps application and background sync manager.",
+            "payload": {
+                "package_name": "Microsoft.WindowsMaps"
+            }
+        },
+        {
+            "id": "Microsoft.OutlookForWindows",
+            "name": "Outlook (New)",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "New web-based Microsoft Outlook email client.",
+            "payload": {
+                "package_name": "Microsoft.OutlookForWindows"
+            }
+        },
+        {
+            "id": "Microsoft.MicrosoftSolitaireCollection",
+            "name": "Solitaire / Mahjong / Casual Games",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Casual games and Solitaire collection with integrated advertising.",
+            "payload": {
+                "package_name": "Microsoft.MicrosoftSolitaireCollection"
+            }
+        },
+        {
+            "id": "Microsoft-Windows-Holographic",
+            "name": "Windows Mixed Reality",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Mixed Reality VR/AR platform.",
+            "payload": {
+                "feature_name": "Microsoft-Windows-Holographic"
+            }
+        },
+        {
+            "id": "XPS.Viewer~~~~0.0.1.0",
+            "name": "Microsoft XPS Viewer",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Legacy XML Paper Specification (XPS) document viewer.",
+            "payload": {
+                "feature_name": "XPS.Viewer~~~~0.0.1.0"
+            }
+        },
+        {
+            "id": "FaxServicesClientPackage",
+            "name": "Fax and Scan",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Legacy Windows Fax and Scan component.",
+            "payload": {
+                "feature_name": "FaxServicesClientPackage"
+            }
+        },
+        {
+            "id": "MicrosoftWindowsPowerShellV2Root",
+            "name": "Windows PowerShell 2.0",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Legacy Windows PowerShell 2.0 engine (vulnerable and deprecated).",
+            "payload": {
+                "feature_name": "MicrosoftWindowsPowerShellV2Root"
+            }
+        },
+        {
+            "id": "Internet-Explorer-Optional-amd64",
+            "name": "Internet Explorer Mode",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Internet Explorer Mode in Microsoft Edge for enterprise legacy web apps.",
+            "payload": {
+                "feature_name": "Internet-Explorer-Optional-amd64"
+            }
+        },
+        {
+            "id": "Clipchamp.Clipchamp",
+            "name": "Clipchamp",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Clipchamp video editing application.",
+            "payload": {
+                "package_name": "Clipchamp.Clipchamp"
+            }
+        },
+        {
+            "id": "Microsoft.Paint",
+            "name": "Paint",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Modern Windows Paint creative drawing application.",
+            "payload": {
+                "package_name": "Microsoft.Paint"
+            }
+        },
+        {
+            "id": "Microsoft.ScreenSketch",
+            "name": "Snipping Tool",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Snipping Tool for screen captures and annotations.",
+            "payload": {
+                "package_name": "Microsoft.ScreenSketch"
+            }
+        },
+        {
+            "id": "Microsoft.WindowsCalculator",
+            "name": "Windows Calculator",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Standard Windows Calculator application.",
+            "payload": {
+                "package_name": "Microsoft.WindowsCalculator"
+            }
+        },
+        {
+            "id": "Microsoft.WindowsNotepad",
+            "name": "Windows Notepad",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Standard Windows Notepad text editor.",
+            "payload": {
+                "package_name": "Microsoft.WindowsNotepad"
+            }
+        },
+        {
+            "id": "Microsoft.Windows.Photos",
+            "name": "Windows Photos",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Default image viewer and media management application.",
+            "payload": {
+                "package_name": "Microsoft.Windows.Photos"
+            }
+        },
+        {
+            "id": "Microsoft.ZuneVideo",
+            "name": "Media Player",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Modern Windows Media Player app.",
+            "payload": {
+                "package_name": "Microsoft.ZuneVideo"
+            }
+        },
+        {
+            "id": "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\\AllowTelemetry",
+            "name": "Diagnostic Data (Telemetry)",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Diagnostic data collection level.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKLM",
+                        "path": "SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection",
+                        "name": "AllowTelemetry",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\AdvertisingInfo\\Enabled",
+            "name": "Advertising ID",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Unique advertising ID used by third-party apps for targeted advertising.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Microsoft\\Windows\\CurrentVersion\\AdvertisingInfo",
+                        "name": "Enabled",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager",
+            "name": "Personalized Recommendations",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Personalized app recommendations, tips, and promotions in Windows.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager",
+                        "name": "SubscribedContent-338387Enabled",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Policies\\Microsoft\\Windows\\CloudContent\\DisableTailoredExperiencesWithDiagnosticData",
+            "name": "Tailored Experiences",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Disables tailored diagnostic experiences and cloud-delivered product suggestions.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Policies\\Microsoft\\Windows\\CloudContent",
+                        "name": "DisableTailoredExperiencesWithDiagnosticData",
+                        "type": "REG_DWORD",
+                        "value": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\CDP\\NearShareChannelUserAuthorized",
+            "name": "Nearby Sharing",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Nearby Sharing: local peer-to-peer file transfer.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Microsoft\\Windows\\CurrentVersion\\CDP",
+                        "name": "NearShareChannelUserAuthorized",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ms-settings:findmydevice",
+            "name": "Find My Device",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Find My Device location tracking service.",
+            "payload": {
+                "instruction": "ms-settings:findmydevice"
+            }
+        },
+        {
+            "id": "Microsoft.WindowsDiagnosticDataViewer",
+            "name": "Diagnostic Data Viewer",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Diagnostic Data Viewer application for inspecting collected telemetry.",
+            "payload": {
+                "package_name": "Microsoft.WindowsDiagnosticDataViewer"
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\CloudStore\\...\\PublishUserActivities",
+            "name": "Activity History",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Cross-device Activity History timeline synchronization.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Policies\\Microsoft\\Windows\\System",
+                        "name": "PublishUserActivities",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Microsoft\\Clipboard\\EnableClipboardHistory",
+            "name": "Clipboard History",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Clipboard history buffer and cloud synchronization (Win+V shortcut).",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Microsoft\\Clipboard",
+                        "name": "EnableClipboardHistory",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Spooler",
+            "name": "Print Spooler",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Print Spooler: core background service for document printing.",
+            "payload": {
+                "service_name": "Spooler",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "stisvc",
+            "name": "WIA (Windows Image Acquisition)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Image Acquisition (WIA) service for scanner devices.",
+            "payload": {
+                "service_name": "stisvc",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "Fax",
+            "name": "Windows Fax (Fax service)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Legacy Windows Fax service for physical telephone line faxing.",
+            "payload": {
+                "service_name": "Fax",
+                "target_start_type": "Disabled"
+            }
+        },
+        {
+            "id": "Universal Print",
+            "name": "Universal Print",
+            "subsystem": "Feature",
+            "type": "Feature",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Enterprise cloud-based print infrastructure (requires Azure AD).",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Mopria",
+            "name": "Mopria",
+            "subsystem": "Feature",
+            "type": "Feature",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Mopria driverless mobile and network printing standard.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Print.IPP~~~~0.0.1.0",
+            "name": "IPP Printing",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Internet Printing Protocol (IPP) client network printing capability.",
+            "payload": {
+                "feature_name": "Print.IPP~~~~0.0.1.0"
+            }
+        },
+        {
+            "id": "Print.Fax.Scan~~~~0.0.1.0",
+            "name": "Print Support Apps",
+            "subsystem": "Capability",
+            "type": "Capability",
+            "automation": "Capability",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Legacy print, fax, and scan support drivers.",
+            "payload": {
+                "feature_name": "Print.Fax.Scan~~~~0.0.1.0"
+            }
+        },
+        {
+            "id": "WSearch",
+            "name": "Windows Search (WSearch)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Search indexing service for rapid local file, app, and email search.",
+            "payload": {
+                "service_name": "WSearch",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "DiagTrack",
+            "name": "Connected User Experiences and Telemetry (DiagTrack)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Connected User Experiences and Telemetry service; primary OS telemetry pipeline.",
+            "payload": {
+                "service_name": "DiagTrack",
+                "target_start_type": "Disabled"
+            }
+        },
+        {
+            "id": "MapsBroker",
+            "name": "Downloaded Maps Manager (MapsBroker)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Offline Maps application and background sync manager.",
+            "payload": {
+                "service_name": "MapsBroker",
+                "target_start_type": "Disabled"
+            }
+        },
+        {
+            "id": "WerSvc",
+            "name": "Windows Error Reporting (WerSvc)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Error Reporting service (WerSvc).",
+            "payload": {
+                "service_name": "WerSvc",
+                "target_start_type": "Disabled"
+            }
+        },
+        {
+            "id": "RemoteRegistry",
+            "name": "Remote Registry",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Enables remote users and services to modify the Windows registry over the network.",
+            "payload": {
+                "service_name": "RemoteRegistry",
+                "target_start_type": "Disabled"
+            }
+        },
+        {
+            "id": "lfsvc",
+            "name": "Geolocation Service (lfsvc)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Geolocation service for location-aware Windows applications and browser.",
+            "payload": {
+                "service_name": "lfsvc",
+                "target_start_type": "Disabled"
+            }
+        },
+        {
+            "id": "WbioSrvc",
+            "name": "Windows Biometric Service (WbioSrvc)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Biometric Service for Hello PIN and fingerprint sensors.",
+            "payload": {
+                "service_name": "WbioSrvc",
+                "target_start_type": "Disabled"
+            }
+        },
+        {
+            "id": "\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator",
+            "name": "CEIP (Customer Experience Improvement Program)",
+            "subsystem": "ScheduledTask",
+            "type": "ScheduledTask",
+            "automation": "ScheduledTask",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Customer Experience Improvement Program (CEIP) scheduled task.",
+            "payload": {
+                "task_paths": [
+                    "\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator",
+                    "\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip"
+                ]
+            }
+        },
+        {
+            "id": "\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser",
+            "name": "Application Experience",
+            "subsystem": "ScheduledTask",
+            "type": "ScheduledTask",
+            "automation": "ScheduledTask",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Microsoft Compatibility Appraiser telemetry scheduler.",
+            "payload": {
+                "task_paths": [
+                    "\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser"
+                ]
+            }
+        },
+        {
+            "id": "\\Microsoft\\Windows\\Autochk\\Proxy",
+            "name": "Autochk\\Proxy",
+            "subsystem": "ScheduledTask",
+            "type": "ScheduledTask",
+            "automation": "ScheduledTask",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Autochk filesystem integrity verification proxy.",
+            "payload": {
+                "task_paths": [
+                    "\\Microsoft\\Windows\\Autochk\\Proxy"
+                ]
+            }
+        },
+        {
+            "id": "\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector",
+            "name": "DiskDiagnostic",
+            "subsystem": "ScheduledTask",
+            "type": "ScheduledTask",
+            "automation": "ScheduledTask",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Disk diagnostic data collector for SMART drive monitoring.",
+            "payload": {
+                "task_paths": [
+                    "\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector"
+                ]
+            }
+        },
+        {
+            "id": "\\Microsoft\\Windows\\Maps\\MapsUpdateTask",
+            "name": "Maps Update",
+            "subsystem": "ScheduledTask",
+            "type": "ScheduledTask",
+            "automation": "ScheduledTask",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Offline Maps application and background sync manager.",
+            "payload": {
+                "task_paths": [
+                    "\\Microsoft\\Windows\\Maps\\MapsUpdateTask"
+                ]
+            }
+        },
+        {
+            "id": "\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient",
+            "name": "Feedback",
+            "subsystem": "ScheduledTask",
+            "type": "ScheduledTask",
+            "automation": "ScheduledTask",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Feedback Hub telemetry scheduler.",
+            "payload": {
+                "task_paths": [
+                    "\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient",
+                    "\\Microsoft\\Windows\\Feedback\\Siuf\\DmClientOnScenarioDownload"
+                ]
+            }
+        },
+        {
+            "id": "\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor",
+            "name": "Family Safety",
+            "subsystem": "ScheduledTask",
+            "type": "ScheduledTask",
+            "automation": "ScheduledTask",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Family Safety parental monitor task.",
+            "payload": {
+                "task_paths": [
+                    "\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor",
+                    "\\Microsoft\\Windows\\Shell\\FamilySafetyRefreshTask"
+                ]
+            }
+        },
+        {
+            "id": "\\Microsoft\\Windows\\Windows Defender\\Windows Defender Cache Maintenance",
+            "name": "Windows Defender Cache Maintenance",
+            "subsystem": "ScheduledTask",
+            "type": "ScheduledTask",
+            "automation": "ScheduledTask",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Defender definition cache maintenance task.",
+            "payload": {
+                "task_paths": [
+                    "\\Microsoft\\Windows\\Windows Defender\\Windows Defender Cache Maintenance"
+                ]
+            }
+        },
+        {
+            "id": "\\Microsoft\\Windows\\Windows Defender\\Windows Defender Cleanup",
+            "name": "Windows Defender Cleanup",
+            "subsystem": "ScheduledTask",
+            "type": "ScheduledTask",
+            "automation": "ScheduledTask",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Periodic cleanup task for Windows Defender signature store.",
+            "payload": {
+                "task_paths": [
+                    "\\Microsoft\\Windows\\Windows Defender\\Windows Defender Cleanup"
+                ]
+            }
+        },
+        {
+            "id": "\\Microsoft\\Windows\\Windows Defender\\Windows Defender Scheduled Scan",
+            "name": "Windows Defender Scheduled Scan",
+            "subsystem": "ScheduledTask",
+            "type": "ScheduledTask",
+            "automation": "ScheduledTask",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Background maintenance scan for Windows Defender anti-malware.",
+            "payload": {
+                "task_paths": [
+                    "\\Microsoft\\Windows\\Windows Defender\\Windows Defender Scheduled Scan"
+                ]
+            }
+        },
+        {
+            "id": "Windows Recall (Future Component)",
+            "name": "Windows Recall (Future Component)",
+            "subsystem": "Feature",
+            "type": "Feature",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Recall AI semantic search framework.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Recall API",
+            "name": "Recall API",
+            "subsystem": "Feature",
+            "type": "Feature",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Recall semantic AI API endpoints.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Recall Snapshots",
+            "name": "Recall Snapshots",
+            "subsystem": "Feature",
+            "type": "Feature",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Recall AI semantic search framework.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Recall Index",
+            "name": "Recall Index",
+            "subsystem": "Feature",
+            "type": "Feature",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Recall user activity vector database indexer.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Recall OCR",
+            "name": "Recall OCR",
+            "subsystem": "Feature",
+            "type": "Feature",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Media OCR language recognition package.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Recall AI Models",
+            "name": "Recall AI Models",
+            "subsystem": "Feature",
+            "type": "Feature",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Recall on-device neural processing models.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsAI\\DisableAIDataAnalysis",
+            "name": "Recall Policies",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Policy disabling Windows AI snapshot recording and analysis.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKLM",
+                        "path": "SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsAI",
+                        "name": "DisableAIDataAnalysis",
+                        "type": "REG_DWORD",
+                        "value": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Recall NPU Components",
+            "name": "Recall NPU Components",
+            "subsystem": "Feature",
+            "type": "Feature",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Recall AI semantic search framework.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "MicrosoftWindows.Client.WebExperience",
+            "name": "Widgets",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows 11 Widgets board and MSN web experience feed.",
+            "payload": {
+                "package_name": "MicrosoftWindows.Client.WebExperience"
+            }
+        },
+        {
+            "id": "MicrosoftTeams",
+            "name": "Chat (Teams Chat)",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Consumer Microsoft Teams chat integration on the taskbar.",
+            "payload": {
+                "package_name": "MicrosoftTeams"
+            }
+        },
+        {
+            "id": "Microsoft.MicrosoftOfficeHub",
+            "name": "Microsoft 365 Hub",
+            "subsystem": "App",
+            "type": "App",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Microsoft 365 web hub application.",
+            "payload": {
+                "package_name": "Microsoft.MicrosoftOfficeHub"
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\Start_IrisRecommendations",
+            "name": "Start Menu Recommendations",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Promoted apps and web suggestions in the Start menu.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+                        "name": "Start_IrisRecommendations",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\\SubscribedContent-338388Enabled",
+            "name": "Suggested Content",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Suggested content and tips in Windows Settings.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager",
+                        "name": "SubscribedContent-338388Enabled",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Policies\\Microsoft\\Windows\\CloudContent\\DisableWindowsSpotlightFeatures",
+            "name": "Windows Spotlight",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Spotlight dynamic lock screen pictures and promotional links.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Policies\\Microsoft\\Windows\\CloudContent",
+                        "name": "DisableWindowsSpotlightFeatures",
+                        "type": "REG_DWORD",
+                        "value": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\SearchSettings\\IsDynamicSearchBoxEnabled",
+            "name": "Search Highlights",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Search Highlights: Registry configuration setting.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Microsoft\\Windows\\CurrentVersion\\SearchSettings",
+                        "name": "IsDynamicSearchBoxEnabled",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\\DisableSearchBoxSuggestions",
+            "name": "Bing Search Integration",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Web search suggestions and trending searches in taskbar search.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Policies\\Microsoft\\Windows\\Explorer",
+                        "name": "DisableSearchBoxSuggestions",
+                        "type": "REG_DWORD",
+                        "value": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Lighting",
+            "name": "Dynamic Lighting",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Dynamic Lighting RGB peripheral control framework.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Microsoft\\Windows\\CurrentVersion\\Lighting",
+                        "name": "AmbientLightingEnabled",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Windows Studio Effects",
+            "name": "Windows Studio Effects",
+            "subsystem": "Feature",
+            "type": "Feature",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Low",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Studio Effects camera and microphone AI filter.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "DoSvc",
+            "name": "Delivery Optimization",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Delivery Optimization: peer-to-peer update distribution.",
+            "payload": {
+                "service_name": "DoSvc",
+                "target_start_type": "Disabled"
+            }
+        },
+        {
+            "id": "C:\\Windows\\SoftwareDistribution\\DeliveryOptimization",
+            "name": "Delivery Optimization Cache",
+            "subsystem": "Cache",
+            "type": "Cache",
+            "automation": "Script",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Delivery Optimization: peer-to-peer update distribution.",
+            "payload": {
+                "script_block": "Remove-Item -Path 'C:\\Windows\\SoftwareDistribution\\DeliveryOptimization' -Recurse -Force"
+            }
+        },
+        {
+            "id": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ReserveManager",
+            "name": "Reserved Storage",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Reserved Storage: Registry configuration setting.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKLM",
+                        "path": "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ReserveManager",
+                        "name": "ShippedWithReserves",
+                        "type": "REG_DWORD",
+                        "value": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\StorageSense",
+            "name": "Storage Sense",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Storage Sense: Registry configuration setting.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Microsoft\\Windows\\CurrentVersion\\StorageSense\\Parameters\\StoragePolicy",
+                        "name": "01",
+                        "type": "REG_DWORD",
+                        "value": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "compact.exe /CompactOS:query",
+            "name": "CompactOS",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "CompactOS filesystem compression status.",
+            "payload": {
+                "instruction": "compact.exe /CompactOS:query"
+            }
+        },
+        {
+            "id": "WinSxS Cleanup Policy",
+            "name": "WinSxS Cleanup Policy",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Manual",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "WinSxS component store cleanup policy.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Policies\\Microsoft\\Edge\\StartupBoostEnabled",
+            "name": "Edge Startup Boost",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Microsoft Edge Startup Boost background preloading.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Policies\\Microsoft\\Edge",
+                        "name": "StartupBoostEnabled",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Policies\\Microsoft\\Edge\\BackgroundModeEnabled",
+            "name": "Edge Background Services",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Edge Background Services: Registry configuration setting.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Policies\\Microsoft\\Edge",
+                        "name": "BackgroundModeEnabled",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "edgeupdate",
+            "name": "Edge Update Service (edgeupdate)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Microsoft Edge automatic update service.",
+            "payload": {
+                "service_name": "edgeupdate",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "edgeupdatem",
+            "name": "Edge Update Service (edgeupdatem)",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Microsoft Edge automatic update service.",
+            "payload": {
+                "service_name": "edgeupdatem",
+                "target_start_type": "Automatic"
+            }
+        },
+        {
+            "id": "MicrosoftEdgeElevationService",
+            "name": "Edge Elevation Service",
+            "subsystem": "Service",
+            "type": "Service",
+            "automation": "Service",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Edge Elevation Service: Service configuration setting.",
+            "payload": {
+                "service_name": "MicrosoftEdgeElevationService",
+                "target_start_type": "Disabled"
+            }
+        },
+        {
+            "id": "Edge WebView2 Dependencies",
+            "name": "Edge WebView2 Dependencies",
+            "subsystem": "Runtime",
+            "type": "Runtime",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Microsoft Edge WebView2 runtime dependencies.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Policies\\Microsoft\\Edge\\HubsSidebarEnabled",
+            "name": "Edge Sidebar",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Edge Sidebar: Registry configuration setting.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Policies\\Microsoft\\Edge",
+                        "name": "HubsSidebarEnabled",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Policies\\Microsoft\\Edge\\EdgeShoppingAssistantEnabled",
+            "name": "Edge Shopping",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Edge Shopping: Registry configuration setting.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Policies\\Microsoft\\Edge",
+                        "name": "EdgeShoppingAssistantEnabled",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKCU\\Software\\Policies\\Microsoft\\Edge\\EdgeCopilotEnabled",
+            "name": "Edge Copilot",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Edge Copilot: Registry configuration setting.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKCU",
+                        "path": "Software\\Policies\\Microsoft\\Edge",
+                        "name": "EdgeCopilotEnabled",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKLM\\SYSTEM\\CurrentControlSet\\Control\\CI\\Policy\\VerifiedAndReputablePolicyState",
+            "name": "Smart App Control",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Smart App Control: cloud executable safety verification.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKLM",
+                        "path": "SYSTEM\\CurrentControlSet\\Control\\CI\\Policy",
+                        "name": "VerifiedAndReputablePolicyState",
+                        "type": "REG_DWORD",
+                        "value": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKLM\\SYSTEM\\CurrentControlSet\\Control\\DeviceGuard\\Scenarios\\HypervisorEnforcedCodeIntegrity",
+            "name": "Core Isolation",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Core Isolation: Registry configuration setting.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKLM",
+                        "path": "SYSTEM\\CurrentControlSet\\Control\\DeviceGuard\\Scenarios\\HypervisorEnforcedCodeIntegrity",
+                        "name": "Enabled",
+                        "type": "REG_DWORD",
+                        "value": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKLM\\SYSTEM\\CurrentControlSet\\Control\\DeviceGuard\\EnableVirtualizationBasedSecurity",
+            "name": "VBS (Virtualization-Based Security)",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Virtualization-Based Security (VBS) hardware memory protection.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKLM",
+                        "path": "SYSTEM\\CurrentControlSet\\Control\\DeviceGuard",
+                        "name": "EnableVirtualizationBasedSecurity",
+                        "type": "REG_DWORD",
+                        "value": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKLM\\SYSTEM\\CurrentControlSet\\Control\\LSA\\LsaCfgFlags",
+            "name": "Credential Guard",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Credential Guard: Registry configuration setting.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKLM",
+                        "path": "SYSTEM\\CurrentControlSet\\Control\\LSA",
+                        "name": "LsaCfgFlags",
+                        "type": "REG_DWORD",
+                        "value": 2
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\RunAsPPL",
+            "name": "LSA Protection",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "LSA Protection: Registry configuration setting.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKLM",
+                        "path": "SYSTEM\\CurrentControlSet\\Control\\Lsa",
+                        "name": "RunAsPPL",
+                        "type": "REG_DWORD",
+                        "value": 2
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\\EnableSmartScreen",
+            "name": "SmartScreen",
+            "subsystem": "Setting",
+            "type": "Setting",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Defender SmartScreen web and file reputation checker.",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKLM",
+                        "path": "SOFTWARE\\Policies\\Microsoft\\Windows\\System",
+                        "name": "EnableSmartScreen",
+                        "type": "REG_DWORD",
+                        "value": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Microsoft.HEIFImageExtension",
+            "name": "Microsoft.HEIFImageExtension",
+            "subsystem": "Codec",
+            "type": "Codec",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Essential modern audio/video codec extension.",
+            "payload": {
+                "package_name": "Microsoft.HEIFImageExtension"
+            }
+        },
+        {
+            "id": "Microsoft.HEVCVideoExtension",
+            "name": "Microsoft.HEVCVideoExtension",
+            "subsystem": "Codec",
+            "type": "Codec",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Essential modern audio/video codec extension.",
+            "payload": {
+                "package_name": "Microsoft.HEVCVideoExtension"
+            }
+        },
+        {
+            "id": "Microsoft.AV1VideoExtension",
+            "name": "Microsoft.AV1VideoExtension",
+            "subsystem": "Codec",
+            "type": "Codec",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Essential modern audio/video codec extension.",
+            "payload": {
+                "package_name": "Microsoft.AV1VideoExtension"
+            }
+        },
+        {
+            "id": "Microsoft.VP9VideoExtensions",
+            "name": "Microsoft.VP9VideoExtensions",
+            "subsystem": "Codec",
+            "type": "Codec",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Essential modern audio/video codec extension.",
+            "payload": {
+                "package_name": "Microsoft.VP9VideoExtensions"
+            }
+        },
+        {
+            "id": "Microsoft.MPEG2VideoExtension",
+            "name": "Microsoft.MPEG2VideoExtension",
+            "subsystem": "Codec",
+            "type": "Codec",
+            "automation": "Appx",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Essential modern audio/video codec extension.",
+            "payload": {
+                "package_name": "Microsoft.MPEG2VideoExtension"
+            }
+        },
+        {
+            "id": "SMB1Protocol",
+            "name": "SMBv1 Protocol (Client/Server)",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Legacy SMBv1 networking protocol (vulnerable to EternalBlue).",
+            "payload": {
+                "feature_name": "SMB1Protocol"
+            }
+        },
+        {
+            "id": "NetbiosOptions (per-adapter, netsh/WMI)",
+            "name": "NetBIOS over TCP/IP",
+            "subsystem": "AdapterSetting",
+            "type": "AdapterSetting",
+            "automation": "Script",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "NetBIOS over TCP/IP: broadcast protocol vulnerable to spoofing.",
+            "payload": {
+                "script_block": "$errs = @(); Get-WmiObject Win32_NetworkAdapterConfiguration | Where-Object { $_.TcpipNetbiosOptions -ne 2 } | ForEach-Object { $res = $_.SetTcpipNetbiosOptions(2); if ($res.ReturnValue -notin @(0,1)) { $errs += \"Adapter $($_.Index) error $($res.ReturnValue)\" } }; if ($errs.Count -gt 0) { throw \"NetBIOS errors: $($errs -join '; ')\" }"
+            }
+        },
+        {
+            "id": "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\DNSClient\\EnableMulticast",
+            "name": "LLMNR",
+            "subsystem": "GroupPolicy/Registry",
+            "type": "GroupPolicy/Registry",
+            "automation": "Registry",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Link-Local Multicast Name Resolution (vulnerable to credential relay).",
+            "payload": {
+                "values": [
+                    {
+                        "hive": "HKLM",
+                        "path": "SOFTWARE\\Policies\\Microsoft\\Windows NT\\DNSClient",
+                        "name": "EnableMulticast",
+                        "type": "REG_DWORD",
+                        "value": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": "TelnetClient",
+            "name": "Telnet Client",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Legacy unencrypted Telnet terminal client.",
+            "payload": {
+                "feature_name": "TelnetClient"
+            }
+        },
+        {
+            "id": "TFTP",
+            "name": "TFTP Client",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "TFTP Client: OptionalFeature configuration setting.",
+            "payload": {
+                "feature_name": "TFTP"
+            }
+        },
+        {
+            "id": "SNMP",
+            "name": "SNMP (Service + WMI Provider)",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Simple Network Management Protocol (SNMP) legacy service.",
+            "payload": {
+                "feature_name": "SNMP"
+            }
+        },
+        {
+            "id": "MSMQ-Server",
+            "name": "MSMQ (Message Queuing)",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "Medium",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Microsoft Message Queuing (MSMQ) legacy IPC server.",
+            "payload": {
+                "feature_name": "MSMQ-Server"
+            }
+        },
+        {
+            "id": "SimpleTCP",
+            "name": "Simple TCP/IP Services",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Simple TCP/IP Services: OptionalFeature configuration setting.",
+            "payload": {
+                "feature_name": "SimpleTCP"
+            }
+        },
+        {
+            "id": "IIS-WebServerRole",
+            "name": "IIS (Internet Information Services)",
+            "subsystem": "OptionalFeature",
+            "type": "OptionalFeature",
+            "automation": "OptionalFeature",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": true,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Internet Information Services (IIS) web server role.",
+            "payload": {
+                "feature_name": "IIS-WebServerRole"
+            }
+        },
+        {
+            "id": "Windows Update",
+            "name": "Windows Update",
+            "subsystem": "Core",
+            "type": "Core",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Update: None configuration setting.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Microsoft Defender Platform",
+            "name": "Microsoft Defender Platform",
+            "subsystem": "Core",
+            "type": "Core",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Core Windows Defender anti-malware platform.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "BITS",
+            "name": "BITS",
+            "subsystem": "Core",
+            "type": "Core",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "BITS: None configuration setting.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "RPC",
+            "name": "RPC",
+            "subsystem": "Core",
+            "type": "Core",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "RPC: None configuration setting.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Plug and Play",
+            "name": "Plug and Play",
+            "subsystem": "Core",
+            "type": "Core",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Plug and Play: None configuration setting.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "COM / DCOM",
+            "name": "COM / DCOM",
+            "subsystem": "Core",
+            "type": "Core",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "COM / DCOM: None configuration setting.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Cryptographic Services",
+            "name": "Cryptographic Services",
+            "subsystem": "Core",
+            "type": "Core",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Cryptographic Services: None configuration setting.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "Windows Installer",
+            "name": "Windows Installer",
+            "subsystem": "Core",
+            "type": "Core",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "Windows Installer: None configuration setting.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        },
+        {
+            "id": "WebView2 Runtime",
+            "name": "WebView2 Runtime",
+            "subsystem": "Core",
+            "type": "Core",
+            "automation": "None",
+            "action": "KEEP",
+            "confidence": "High",
+            "reversible": false,
+            "side_effects": [],
+            "depends_on": [],
+            "note": "WebView2 Runtime: None configuration setting.",
+            "payload": {
+                "instruction": "Manual action required"
+            }
+        }
+    ]
+}
